@@ -1,6 +1,6 @@
 .skills-section {
   background: linear-gradient(180deg, #0a0412 0%, #1a0f2e 100%);
-  padding: 100px 5%;
+  padding: 100px 4%;
   text-align: center;
   color: white;
   min-height: 100vh;
@@ -31,8 +31,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
+    padding: 0;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;

@@ -1,24 +1,208 @@
-<section class="projects-section">
-  <h2>Featured Projects</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-content">
-        <h3>AI Assistant</h3>
-        <p>Un assistant intelligent utilisant le NLP pour automatiser les tâches quotidiennes.</p>
-        <div class="tags">
-          <span>Python</span><span>TensorFlow</span><span>Angular</span>
-        </div>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <div class="project-card">
-      <div class="project-content">
-        <h3>E-commerce Platform</h3>
-        <p>Une solution Full-Stack avec paiement sécurisé et gestion d'inventaire.</p>
-        <div class="tags">
-          <span>Node.js</span><span>MongoDB</span><span>Stripe</span>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #050505;
+        }
+
+        .projects-section {
+            padding: 80px 10%;
+            background-color: #050505;
+            text-align: center;
+        }
+
+        .projects-section h2 {
+            font-size: 2.5rem;
+            color: #cbd5e1;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #1a0b1a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #8a8ab9;
+            box-shadow: 0 10px 30px rgba(138, 138, 185, 0.3);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .project-content p {
+            color: #a0a0a0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tags span {
+            background: rgba(138, 138, 185, 0.2);
+            color: #8a8ab9;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .projects-section {
+                padding: 60px 5%;
+            }
+
+            .projects-section h2 {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>AI Assistant</h3>
+                    <p>Un assistant intelligent utilisant le NLP pour automatiser les tâches quotidiennes.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>E-commerce Platform</h3>
+                    <p>Une solution Full-Stack avec paiement sécurisé et gestion d'inventaire.</p>
+                    <div class="tags">
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Stripe</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Diagnostic Médical Assisté par IA</h3>
+                    <p>Système de diagnostic médical intelligent utilisant l'apprentissage automatique pour l'analyse prédictive.</p>
+                    <div class="tags">
+                        <span>React</span>
+                        <span>Spring Boot</span>
+                        <span>Flask</span>
+                        <span>ML</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Classification de Fruits - Flutter</h3>
+                    <p>Application mobile intelligente de classification de fruits utilisant CNN et réseaux de neurones.</p>
+                    <div class="tags">
+                        <span>Flutter</span>
+                        <span>CNN</span>
+                        <span>ANN</span>
+                        <span>TensorFlow</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Gestion de Réunions Intelligente</h3>
+                    <p>Plateforme de gestion de réunions avec génération automatique de rapports et comptes-rendus par IA.</p>
+                    <div class="tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>NLP</span>
+                        <span>AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Digitalisation des Audits - RAM</h3>
+                    <p>Système de gestion et digitalisation des processus d'audit pour Royal Air Maroc.</p>
+                    <div class="tags">
+                        <span>Spring Boot</span>
+                        <span>React</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Gestion ONDA - Classification d'Images</h3>
+                    <p>Système de classification d'images pour identifier automatiquement les produits et références pour l'ONDA.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>CNN</span>
+                        <span>OpenCV</span>
+                        <span>Flask</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Web Scraping & Data Analysis</h3>
+                    <p>Outil de collecte et analyse de données web avec extraction intelligente d'informations.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Scrapy</span>
+                        <span>BeautifulSoup</span>
+                        <span>Pandas</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+</body>
+</html>

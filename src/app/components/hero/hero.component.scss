@@ -1,0 +1,41 @@
+.hero-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #050505; // Le fond noir
+
+  .hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      color: white;
+      margin-bottom: 0.5rem;
+      
+      span {
+        color: #b0c4de; // Bleu clair/gris comme l'image
+        text-shadow: 0 0 30px rgba(176, 196, 222, 0.4);
+      }
+    }
+
+    .title {
+      color: #8a8ab9; // Violet terne
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .tagline {
+      color: #777;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}

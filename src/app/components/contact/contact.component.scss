@@ -1,0 +1,17 @@
+.contact-section {
+  background-color: black;
+  color: white;
+  padding: 100px 10%;
+  text-align: center;
+
+  .contact-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    text-align: left;
+  }
+
+  h2 { font-size: 3rem; }
+  h3 { color: white; margin-bottom: 20px; }
+  p, li { color: #a0a0a0; margin: 15px 0; }
+}

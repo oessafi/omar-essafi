@@ -2,48 +2,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 10%;
-  background: rgba(5, 5, 5, 0.8);
-  backdrop-filter: blur(10px);
+  padding: 1rem 5%;
+  background: #050505; //
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-  .logo {
-    color: #8a8ab9;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: monospace;
-  }
 
   .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
     gap: 2rem;
-
     a {
+      color: #a0a0a0;
       text-decoration: none;
-      color: #ccc;
-      font-size: 0.9rem;
-      transition: color 0.3s;
+      cursor: pointer;
       &:hover { color: white; }
     }
   }
 
   .resume-btn {
     background: transparent;
-    border: 1px solid #444;
     color: white;
+    border: 1px solid #333; // Bordure du design
     padding: 8px 16px;
     border-radius: 8px;
-    cursor: pointer;
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 8px;
     transition: 0.3s;
 
-    &:hover { background: rgba(255,255,255,0.1); border-color: #8a8ab9; }
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #8a8ab9; // Effet violet au survol
+    }
   }
 }

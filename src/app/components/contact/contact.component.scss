@@ -1,232 +1,180 @@
-.contact-section {
-  background: #000;
-  color: white;
-  padding: 120px 10%;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  // Étoiles animées
-  .stars,
-  .stars2,
-  .stars3 {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-section {
+    padding: 100px 10%;
+    background: #050505;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stars,
+.stars2,
+.stars3 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
-  }
-
-  .stars {
     background: transparent;
-    box-shadow: 
-      1200px 150px #fff, 800px 450px #fff, 1500px 350px #fff,
-      300px 200px #fff, 1800px 500px #fff, 600px 100px #fff,
-      1000px 600px #fff, 400px 400px #fff, 1600px 200px #fff,
-      200px 500px #fff, 1400px 100px #fff, 700px 300px #fff,
-      900px 50px #fff, 1100px 400px #fff, 500px 600px #fff,
-      1700px 450px #fff, 100px 350px #fff, 1300px 250px #fff;
-    width: 1px;
-    height: 1px;
-    animation: animStar 50s linear infinite;
-    
-    &::after {
-      content: " ";
-      position: absolute;
-      top: 2000px;
-      width: 1px;
-      height: 1px;
-      background: transparent;
-      box-shadow: 
-        1200px 150px #fff, 800px 450px #fff, 1500px 350px #fff,
-        300px 200px #fff, 1800px 500px #fff, 600px 100px #fff,
-        1000px 600px #fff, 400px 400px #fff, 1600px 200px #fff,
-        200px 500px #fff, 1400px 100px #fff, 700px 300px #fff,
-        900px 50px #fff, 1100px 400px #fff, 500px 600px #fff,
-        1700px 450px #fff, 100px 350px #fff, 1300px 250px #fff;
+}
+
+.stars {
+    background: radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+                radial-gradient(2px 2px at 60px 70px, #fff, transparent);
+    background-size: 200px 200px;
+    animation: animateStars 50s linear infinite;
+}
+
+.stars2 {
+    background: radial-gradient(1px 1px at 50px 50px, #fff, transparent),
+                radial-gradient(1px 1px at 100px 100px, #eee, transparent);
+    background-size: 250px 250px;
+    animation: animateStars 100s linear infinite;
+}
+
+.stars3 {
+    background: radial-gradient(1px 1px at 10px 10px, #fff, transparent),
+                radial-gradient(1px 1px at 150px 150px, #eee, transparent);
+    background-size: 300px 300px;
+    animation: animateStars 150s linear infinite;
+}
+
+@keyframes animateStars {
+    from {
+        transform: translateY(0);
     }
-  }
-
-  .stars2 {
-    background: transparent;
-    box-shadow: 
-      700px 200px #fff, 1300px 100px #fff, 400px 500px #fff,
-      1600px 350px #fff, 200px 150px #fff, 1000px 450px #fff,
-      800px 300px #fff, 1400px 550px #fff, 500px 250px #fff,
-      1100px 150px #fff, 300px 400px #fff, 1700px 250px #fff;
-    width: 2px;
-    height: 2px;
-    animation: animStar 100s linear infinite;
-    
-    &::after {
-      content: " ";
-      position: absolute;
-      top: 2000px;
-      width: 2px;
-      height: 2px;
-      background: transparent;
-      box-shadow: 
-        700px 200px #fff, 1300px 100px #fff, 400px 500px #fff,
-        1600px 350px #fff, 200px 150px #fff, 1000px 450px #fff,
-        800px 300px #fff, 1400px 550px #fff, 500px 250px #fff,
-        1100px 150px #fff, 300px 400px #fff, 1700px 250px #fff;
+    to {
+        transform: translateY(-2000px);
     }
-  }
+}
 
-  .stars3 {
-    background: transparent;
-    box-shadow: 
-      900px 300px #8a8ab9, 1500px 200px #8a8ab9, 600px 400px #8a8ab9,
-      1200px 500px #8a8ab9, 300px 300px #8a8ab9, 1700px 400px #8a8ab9;
-    width: 3px;
-    height: 3px;
-    animation: animStar 150s linear infinite;
-    
-    &::after {
-      content: " ";
-      position: absolute;
-      top: 2000px;
-      width: 3px;
-      height: 3px;
-      background: transparent;
-      box-shadow: 
-        900px 300px #8a8ab9, 1500px 200px #8a8ab9, 600px 400px #8a8ab9,
-        1200px 500px #8a8ab9, 300px 300px #8a8ab9, 1700px 400px #8a8ab9;
-    }
-  }
-
-  @keyframes animStar {
-    from { transform: translateY(0px); }
-    to { transform: translateY(-2000px); }
-  }
-
-  h2 {
-    font-size: 3.5rem;
-    font-weight: 700;
+.contact-section h2 {
+    font-size: 3rem;
     color: #cbd5e1;
     margin-bottom: 15px;
-    letter-spacing: -0.5px;
     position: relative;
     z-index: 1;
+    font-weight: 700;
+}
 
-    @media (max-width: 768px) {
-      font-size: 2.5rem;
-    }
-  }
-
-  .subtitle {
+.subtitle {
     color: #94a3b8;
-    font-size: 1.25rem;
-    margin-bottom: 80px;
+    font-size: 1.15rem;
+    margin-bottom: 60px;
     position: relative;
     z-index: 1;
-  }
+}
 
-  .contact-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 80px;
-    max-width: 1200px;
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
     margin: 0 auto;
-    text-align: left;
     position: relative;
     z-index: 1;
+}
 
-    @media (max-width: 968px) {
-      flex-direction: column;
-      gap: 60px;
-    }
-  }
+.contact-info,
+.opportunities {
+    background: rgba(26, 11, 26, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(138, 138, 185, 0.1);
+    text-align: left;
+    transition: all 0.3s ease;
+}
 
-  .contact-info,
-  .opportunities {
-    flex: 1;
-  }
+.contact-info:hover,
+.opportunities:hover {
+    transform: translateY(-5px);
+    border-color: rgba(138, 138, 185, 0.3);
+    box-shadow: 0 10px 30px rgba(138, 138, 185, 0.2);
+}
 
-  h3 {
+.contact-info h3,
+.opportunities h3 {
     color: #cbd5e1;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
     font-weight: 600;
-    margin-bottom: 30px;
-  }
+}
 
-  .contact-item {
+.contact-item {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin: 25px 0;
-    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
 
-    &:hover {
-      transform: translateX(10px);
+.icon {
+    width: 24px;
+    height: 24px;
+    color: #8a8ab9;
+    flex-shrink: 0;
+}
 
-      a {
-        color: #a5a5d9;
-      }
+.contact-item a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    word-break: break-word;
+}
 
-      .icon {
-        color: #8a8ab9;
-        transform: scale(1.1);
-      }
+.contact-item a:hover {
+    color: #8a8ab9;
+}
+
+.opportunities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.opportunities li {
+    color: #a0a0a0;
+    font-size: 1rem;
+    padding: 12px 0;
+    padding-left: 20px;
+    position: relative;
+    border-bottom: 1px solid rgba(138, 138, 185, 0.1);
+}
+
+.opportunities li:last-child {
+    border-bottom: none;
+}
+
+.opportunities li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #8a8ab9;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 5%;
     }
 
-    .icon {
-      width: 26px;
-      height: 26px;
-      color: #8a8ab9;
-      flex-shrink: 0;
-      transition: all 0.3s ease;
+    .contact-section h2 {
+        font-size: 2rem;
     }
 
-    a {
-      color: #cbd5e1;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-      font-weight: 400;
+    .contact-container {
+        grid-template-columns: 1fr;
     }
-  }
-
-  .opportunities {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li {
-        color: #cbd5e1;
-        font-size: 1.1rem;
-        margin: 25px 0;
-        padding-left: 30px;
-        position: relative;
-        transition: all 0.3s ease;
-        font-weight: 400;
-
-        &::before {
-          content: '•';
-          position: absolute;
-          left: 5px;
-          color: #8a8ab9;
-          font-size: 1.8rem;
-          line-height: 1;
-          transition: all 0.3s ease;
-        }
-
-        &:hover {
-          color: white;
-          padding-left: 35px;
-
-          &::before {
-            transform: scale(1.4);
-            color: #a5a5d9;
-          }
-        }
-      }
-    }
-  }
 }
